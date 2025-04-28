@@ -1,0 +1,30 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Over</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Congrats, you beat the memory matcher game! Play again to improve your score!</h1>
+  <div id="final-score-container">
+  <p>You're final score is <span id="final-score">0</span> moves.</p>
+</div>
+
+  <button onclick="window.location.href='game.html'">Play (Normal)</button>
+  <button onclick="window.location.href='challenge.html'">Play (Challenge)</button>
+  <button onclick="window.location.href='index.html'">Home</button>
+
+  <script>
+    window.onload = () => {
+      const finalScore = localStorage.getItem('Score');
+      if (finalScore !== null) {
+        document.getElementById('final-score').textContent = finalScore;
+      } else {
+        document.getElementById('final-score').textContent = 'No score available.';
+      }
+    };
+  </script>
+</body>
+</html>

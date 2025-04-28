@@ -1,0 +1,191 @@
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: #fff;
+  transition: background 0.3s ease;
+font-size:25px;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  margin: 20px;
+  
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.home-container,
+.instructions-container,
+.game-over-container,
+.game-container {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto; 
+  align-items: center;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+  animation: fadeIn 1s ease-in;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card.flipped {
+  background-color: #fff;
+  transform: rotateY(180deg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card.matched {
+  background-color: #4CAF50;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+button {
+ 
+text-align: center;
+  padding: 12px 25px;
+  margin: 15px 10px;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #2575fc;
+  color: #fff;
+  
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #6a11cb;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+
+#game-info {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#game-info span {
+  font-weight: bold;
+  color: #ffeb3b; 
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+ 
+
+
+#final-score-container {
+  margin-top: 10px; 
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.3s ease;
+}
+
+#final-score-container p {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0;
+  color: #ffeb3b; 
+}
+
+#final-score-container span {
+  font-size: 25px;
+  font-weight: 700;
+  color: #4CAF50; 
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#final-score-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+#final-score-container:active {
+  transform: scale(1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+#play-again-button {
+  margin-top: 10px; 
+}
